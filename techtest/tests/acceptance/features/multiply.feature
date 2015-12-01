@@ -3,7 +3,6 @@ Feature: Multiplication
     As a user
     I should be able to use calculator functions
 
-@example
 Scenario Outline: Multiply two number
   Given I enter "<num1>" into the calculator
   And I hit "multiply"
