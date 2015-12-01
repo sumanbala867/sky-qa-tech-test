@@ -1,4 +1,7 @@
 Feature: Multiplication
+    In order to test multiplication
+    As a user
+    I should be able to use calculator functions
 
 @example
 Scenario: Multiply two numbers together
@@ -27,3 +30,23 @@ Scenario: Multiply two numbers and add another
     And I enter "2" into the calculator
     And I hit "equals"
     Then I see a result of "52"
+
+@example
+Scenario: Multiply two numbers and divide by another
+    Given I enter "4" into the calculator
+    And I hit "multiply"
+    And I enter "6" into the calculator
+    And I hit "divide"
+    And I enter "3" into the calculator
+    And I hit "equals"
+    Then I see a result of "8"
+
+@example
+Scenario: Multiply two numbers and subtract another
+    Given I enter "7" into the calculator
+    And I hit "multiply"
+    And I enter "3" into the calculator
+    And I hit "subtract"
+    And I enter "1" into the calculator
+    And I hit "equals"
+    Then I see a result of "20"
