@@ -11,9 +11,15 @@ require_once("iCalculator.php");
 require_once("iScientificCalculator.php");
 require_once("Calculator.php");
 
+/**
+ * Features context.
+ */
 class FeatureContext extends BehatContext {
     protected $calculator;
 
+     /**
+     * Initializes context.
+     */
     public function __construct() {
         $this->calculator = new Calculator();
     }
@@ -55,4 +61,21 @@ class FeatureContext extends BehatContext {
             throw new Exception("Wrong result, actual is [$result]");
         }
     }
+    
+        /**
+     * @Given /^I hit "add"$/
+     */
+    public function iHitAdd()
+    {
+        $this->calculator->pressAdd();
+    }
+
+    /**
+     * @Given /^I hit "subtract"$/
+     */
+    public function iHitSubtract()
+    {
+        $this->calculator->pressSubtract();
+    }
+
 }
