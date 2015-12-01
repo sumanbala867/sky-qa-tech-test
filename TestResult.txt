@@ -1,0 +1,56 @@
+Feature: Multiplication
+  In order to test multiplication
+  As a user
+  I should be able to use calculator functions
+
+  @example
+  Scenario: Multiply two numbers together # features/multiply.feature:7
+    Given I enter "5" into the calculator # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "multiply"                  # FeatureContext::iHitMultiply()
+    And I enter "10" into the calculator  # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                    # FeatureContext::iHitEquals()
+    Then I see a result of "50"           # FeatureContext::iSeeAResultOf()
+
+  @example
+  Scenario: Multiply three numbers together # features/multiply.feature:15
+    Given I enter "5" into the calculator   # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "multiply"                    # FeatureContext::iHitMultiply()
+    And I enter "10" into the calculator    # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "multiply"                    # FeatureContext::iHitMultiply()
+    And I enter "2" into the calculator     # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                      # FeatureContext::iHitEquals()
+    Then I see a result of "100"            # FeatureContext::iSeeAResultOf()
+
+  @example
+  Scenario: Multiply two numbers and add another # features/multiply.feature:25
+    Given I enter "5" into the calculator        # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "multiply"                         # FeatureContext::iHitMultiply()
+    And I enter "10" into the calculator         # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "add"                              # FeatureContext::iHitAdd()
+    And I enter "2" into the calculator          # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                           # FeatureContext::iHitEquals()
+    Then I see a result of "52"                  # FeatureContext::iSeeAResultOf()
+
+  @example
+  Scenario: Multiply two numbers and divide by another # features/multiply.feature:35
+    Given I enter "4" into the calculator              # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "multiply"                               # FeatureContext::iHitMultiply()
+    And I enter "6" into the calculator                # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "divide"                                 # FeatureContext::iHitDivide()
+    And I enter "3" into the calculator                # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                                 # FeatureContext::iHitEquals()
+    Then I see a result of "8"                         # FeatureContext::iSeeAResultOf()
+
+  @example
+  Scenario: Multiply two numbers and subtract another  # features/multiply.feature:45
+    Given I enter "7" into the calculator              # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "multiply"                               # FeatureContext::iHitMultiply()
+    And I enter "3" into the calculator                # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "subtract"                               # FeatureContext::iHitSubtract()
+    And I enter "1" into the calculator                # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                                 # FeatureContext::iHitEquals()
+    Then I see a result of "20"                        # FeatureContext::iSeeAResultOf()
+
+5 scenarios (5 passed)
+33 steps (33 passed)
+0m0.019s
